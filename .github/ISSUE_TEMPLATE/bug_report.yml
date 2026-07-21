@@ -1,0 +1,76 @@
+name: Bug Report
+description: Report something that isn't working correctly in KZLauncher
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out the
+        fields below as completely as you can -- it helps a lot.
+
+  - type: input
+    id: version
+    attributes:
+      label: KZLauncher version
+      description: Which version/release are you using? (e.g. 1.6.0, or the pre-release you downloaded)
+      placeholder: "1.6.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: install-type
+    attributes:
+      label: How are you running KZLauncher?
+      options:
+        - Installed via KZLauncher_Setup.exe
+        - Portable .exe
+        - Running from source (.pyw / Python)
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the bug. What did you expect to happen instead?
+      placeholder: Tell us what went wrong...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How can we make the bug happen again?
+      placeholder: |
+        1. Open KZLauncher
+        2. Enter IP address ...
+        3. Click Connect
+        4. ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Status screen message / error text (if any)
+      description: Copy the exact message shown in the app's status screen, or any error text, if there was one.
+    validations:
+      required: false
+
+  - type: input
+    id: os
+    attributes:
+      label: Windows version
+      placeholder: "Windows 11 23H2"
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Screenshots, additional context, or anything else that might help.
+    validations:
+      required: false
